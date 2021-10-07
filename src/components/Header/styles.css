@@ -1,0 +1,6 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(105, 50, 4, 0.719);
+    margin: 0;
+}

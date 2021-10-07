@@ -1,0 +1,38 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    border-radius: .5em;
+    background-color: rgba(87, 85, 85, 0.322);
+    margin: 1em;
+    padding: 1em;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+input {
+    background-color: rgba(87, 85, 85, 0);
+    border: none;
+    border-bottom: 2px solid rgb(78, 52, 2);
+}
+
+button {
+    background-color: rgba(87, 85, 85, 0);
+    border: none;
+    padding: .5em;
+}
+
+button:hover {
+    background-color: rgba(87, 85, 85, 0.322);
+}
+
+.country-info-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 75%;
+}

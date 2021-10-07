@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useApiData } from './hooks/useApiData';
+import { useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/Header/Header';
+import Body from './components/Body/Body';
+import Footer from './components/Footer/Footer';
+import ErrorDisplay from './components/ErrorDisplay/ErrorDisplay';
+import ScaleLoader from "react-spinners/ScaleLoader";
+
+const App = () => {
+
+    const [country, setCountry] = useState('US');
+    const { data, loading, error } = useApiData(country);
+
+    return (
+        <div className="container">
+            <Header />
+            {loading && !error && <ScaleLoader className="loader" loading={loading} />}
+            {error && <ErrorDisplay error={error} />}
+            {!loading && !error && <Body data={data} setCountry={setCountry} />}
+            <Footer />
+        </div>
+    )
 }
 
 export default App;
