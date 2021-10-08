@@ -56,6 +56,7 @@ const useApiData = (country) => {
         data,
         loading: isLoading,
         error,
+        setError
     }
 }
 

@@ -1,12 +1,10 @@
-import Form from './Form/Form';
 import InfoDisplay from './InfoDisplay/InfoDisplay';
 import './styles.css';
 
-const Body = ({ data, setCountry }) => {
+const Body = ({ data }) => {
 
     return (
         <div className="body">
-            <Form setCountry={setCountry} />
             <InfoDisplay data={data} />
         </div>
     )
