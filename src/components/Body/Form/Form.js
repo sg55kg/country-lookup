@@ -7,7 +7,7 @@ const Form = ({ setCountry }) => {
 
     return (
         <form className="form" onSubmit={handleSubmit}>
-            <h4>Enter a country (US, UK, CAN, etc):</h4>
+            <h4>Enter a country (US, UK, CA, etc):</h4>
             <input type="text" name="country" />
             <button type="submit">Search Countries</button>
         </form>
