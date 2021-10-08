@@ -19,7 +19,7 @@ const App = () => {
             <div className="container">
                 <Header />
                 <Route path="/country-lookup">
-                    <Form setCountry={setCountry} />
+                    {!error && <Form setCountry={setCountry} />}
                     {loading && !error && <ScaleLoader className="loader" loading={loading} />}
                     {!loading && !error && <Body data={data} />}
                 </Route>

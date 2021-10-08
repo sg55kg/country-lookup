@@ -6,7 +6,7 @@
 
 .form {
     border-radius: .5em;
-    background-color: rgba(87, 85, 85, 0.322);
+    background-color: rgba(148, 147, 147, 0.322);
     margin: 1em;
     padding: 1em;
     align-items: center;
@@ -14,16 +14,22 @@
     justify-content: space-around;
 }
 
+.form h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 input {
     background-color: rgba(87, 85, 85, 0);
     border: none;
-    border-bottom: 2px solid rgb(78, 52, 2);
+    border-bottom: 1px solid rgb(78, 52, 2);
 }
 
 button {
     background-color: rgba(87, 85, 85, 0);
     border: none;
+    border-radius: .5em;
     padding: .5em;
+    font-family: 'Roboto-mono', monospace;
 }
 
 button:hover {
@@ -35,4 +41,13 @@ button:hover {
     flex-direction: column;
     justify-content: flex-start;
     width: 75%;
+}
+
+.country-info-display h2 {
+    font: 2em 'Roboto-mono', monospace;
+    text-decoration: underline;
+}
+
+.country-info-display h4 {
+    margin: 0;
 }
